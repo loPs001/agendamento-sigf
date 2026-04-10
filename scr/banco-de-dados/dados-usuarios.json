@@ -1,0 +1,46 @@
+[
+    {
+        "nome": "Ismael Lopes Pessoa",
+        "cpf": "555555555",
+        "email": "email@email.com",
+        "senha": "12345678",
+        "consultas": [
+            {
+                "cpf": "555555555",
+                "paciente": "Ismael Lopes Pessoa",
+                "tipoConsulta": "Ortopedista",
+                "dataHora": "2026-04-10 03:45:28",
+                "status": "Agendado"
+            }
+        ]
+    },
+    {
+        "nome": "Lucas",
+        "cpf": "66666666",
+        "email": "gmail@gmail.com",
+        "senha": "12345678",
+        "consulta": []
+    },
+    {
+        "nome": "Lucas Lira",
+        "cpf": "7654646564",
+        "email": "yahoo@yahoo.com",
+        "senha": "12345678",
+        "consultas": [
+            {
+                "cpf": "7654646564",
+                "paciente": "Lucas Lira",
+                "tipoConsulta": "Clinico Geral",
+                "dataHora": "2026-04-10 03:13:21",
+                "status": "Agendado"
+            }
+        ]
+    },
+    {
+        "nome": "TESTE",
+        "cpf": "55555555",
+        "email": "join@join.com",
+        "senha": "12345678",
+        "consulta": []
+    }
+]

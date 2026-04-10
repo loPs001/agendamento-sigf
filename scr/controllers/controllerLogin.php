@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . "/../abaUser.php";
 require_once __DIR__ . "/../models/Usuario.php";
-class ControllerUsuario {
+class ControllerLogin {
     public static function Cadastro (&$dados, $caminhoFile) {
         print("=== Area de Cadastro ===\n");
         $decisao = false;
@@ -17,7 +17,7 @@ class ControllerUsuario {
             } 
         }
         if ($decisao !== false) {
-            print ("ERROR!, EMAIL ou CPF já cadastrados!\n");
+            print ("=== [ERROR]EMAIL ou CPF já cadastrados! ===\n");
         } else {
             //Manipulação de dados
             $novoUsuario = new Usuario($nome, $cpf, $email, $senha);
@@ -42,7 +42,7 @@ class ControllerUsuario {
         if ($decisao != false) {
             abaUser($loginUser);
         } else {
-            print("Não foi possivel achar tal usuário...\n");
+            print("=== [ERROR]Não foi possivel achar tal usuário...\n ===");
         }
     }
 

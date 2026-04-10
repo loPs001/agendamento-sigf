@@ -1,9 +1,9 @@
 <?php 
-require_once __DIR__ ."/controllers/controllerUser.php";
+require_once __DIR__ ."/controllers/controllerLogin.php";
 
 //Diretorio e formatação para Array:
-$caminho = __DIR__ . DIRECTORY_SEPARATOR . "./dados.json";
-$dados = json_decode(file_get_contents($caminho), true); 
+$caminho = __DIR__ . DIRECTORY_SEPARATOR . "./banco-de-dados/dados-usuarios.json";
+$dadosUsuarios = json_decode(file_get_contents($caminho), true); 
 
 while (True) {
     print ("==================================================\n");  
@@ -13,15 +13,15 @@ while (True) {
     print ("==================================================\n");  
     switch ($inputP) {
         case "1":       
-            ControllerUsuario::Cadastro($dados, $caminho);
+            ControllerLogin::Cadastro($dadosUsuarios, $caminho);
             break;
         case "2":
-            ControllerUsuario::Login($dados);
+            ControllerLogin::Login($dadosUsuarios);
             break;
         case "3":
             return true;
         default: 
-            print("Houve um problema!\n");
+            print("=== [ERROR]Houve um problema! ===\n");
     }
 }
 

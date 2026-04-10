@@ -8,6 +8,26 @@ O sistema deverá oferecer uma interface simples, amigável e acessível - já q
 ## Diagrama UML:
 ![Diagrama UML](imagem-representacao-uml.png)
 
+## Estrutura do Projeto
+```
+├ MATERIA-POO
+├── src
+│   ├── banco-de-dados
+│   │   ├── dados-consultas.json
+│   │   └── dados-usuarios.json
+│   │
+│   ├── controllers
+│   │   ├── controllerLogin.php
+│   │   └── controllerUsuario.php
+│   │
+│   ├── models
+│   │   ├── Consulta.php
+│   │   └── Usuario.php
+│   │
+│   ├── abaUser.php
+│   └── index.php
+```
+
 ## Principias Funcionalidaes
 **1. Usuário**
 * Criar agendamento

@@ -1,0 +1,23 @@
+[
+    {
+        "cpf": "555555555",
+        "paciente": "Ismael Lopes Pessoa",
+        "tipoConsulta": "Dentista",
+        "dataHora": "2026-04-10 03:06:44",
+        "status": "Agendado"
+    },
+    {
+        "cpf": "7654646564",
+        "paciente": "Lucas Lira",
+        "tipoConsulta": "Clinico Geral",
+        "dataHora": "2026-04-10 03:13:21",
+        "status": "Agendado"
+    },
+    {
+        "cpf": "555555555",
+        "paciente": "Ismael Lopes Pessoa",
+        "tipoConsulta": "Ortopedista",
+        "dataHora": "2026-04-10 03:45:28",
+        "status": "Agendado"
+    }
+]
