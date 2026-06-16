@@ -9,44 +9,89 @@ O sistema deverá oferecer uma interface simples, amigável e acessível - já q
 ![Diagrama UML](imagem-representacao-uml.png)
 
 ## Estrutura do Projeto
+
+```
+agendamento-sigf-laravel/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   ├── ControllerAuth.php
+│   │   │   ├── ControllerUser.php
+│   │   │   └── ControllerMedico.php
+│   │   └── Middleware/
+│   │       ├── VerificarLogin.php
+│   │       └── VerificarMedico.php
+│   └── Models/
+│       ├── ModeloUsuario.php
+│       ├── ModeloMedico.php ← extends ModeloUsuario
+│       └── ModeloConsulta.php
+├── bootstrap/
+│   └── app.php
+├── public/
+│   └── style.css
+├── resources/
+│   └── views/
+│       ├── layout/
+│       │   └── app.blade.php
+│       ├── home.blade.php
+│       ├── cadastro.blade.php
+│       ├── login.blade.php
+│       ├── painel.blade.php
+│       ├── agendamento.blade.php
+│       ├── consultas.blade.php
+│       ├── opcao.blade.php
+│       ├── painel_medico.blade.php
+│       └── consultas_medico.blade.php
+├── routes/
+│   └── web.php
+└── storage/
+    └── app/
+        ├── dados-usuarios.json
+        └── dados-consultas.json
 ```
 
-## Principias Funcionalidaes
-**1. Usuário**
+## Principais Funcionalidades
+
+**1. Usuário (Paciente)**
 * Criar agendamento
 * Visualizar consultas marcadas
 * Cancelar agendamento
 
-**2. Profissional de Saúde**
-* Visualizar agenda de atendimentos
-* Atualizar status da consulta
+**2. Profissional de Saúde (Médico)**
+* Visualizar todos os agendamentos do sistema
+* Marcar consulta como finalizada
 * Registrar ausência de paciente
 
 ## Regras de Negócio
 * Um paciente pode ter vários agendamentos.
 * Cada agendamento pertence a apenas um paciente.
+* Médicos não podem ser cadastrados pela aplicação — o cadastro é feito diretamente no arquivo de dados.
 * O status do agendamento pode ser:
-    * Solicitado
-    * Confirmado
+    * Agendado
+    * Finalizado
+    * Ausente
     * Cancelado
-    * Concluído
-    * Paciente ausente
 
-## Tecnologias que serão utilizadas:
+## Tecnologias Utilizadas
+
 **1. Frontend:**
 * HTML5
 * CSS3
 * JavaScript (Vanilla)
+* Blade (Laravel Template Engine)
 
 **2. Backend:**
-* PHP (ou JavaScript (Node.js))
+* PHP com Laravel
 
-**3. Banco de Dados:**
-* MySQL
+**3. Armazenamento de Dados:**
+* Arquivos JSON (sem banco de dados relacional)
 
-## Licença: 
+## Nota do Criador
+Esse projeto foi feito e inspirado na temática de um projeto do semestre passado, coordenado pelo professor Marcelo em 2025. Gostei muito de desenvolvê-lo — transformar uma ideia que existia apenas no papel em algo funcional foi desafiador, porém ao concluí-lo me sinto vitorioso.
+
+
+## Licença
 Projeto desenvolvido por loPs001, apenas para fins educacionais.
-
 Obrigado pela atenção!
 
 
