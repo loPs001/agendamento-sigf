@@ -1,1 +1,42 @@
-[]
+[
+    {
+        "cpf": "12345678",
+        "nome": "Teste2",
+        "tipoConsulta": "consulta",
+        "dataHora": "2026-06-24 14:00",
+        "unidade": "UBS Jardim das Flores",
+        "data_formatada": "24\/06\/2026 às 14:00h",
+        "status": "Finalizado",
+        "cor_status": "#2563eb"
+    },
+    {
+        "cpf": "123456789",
+        "nome": "Teste3",
+        "tipoConsulta": "exame",
+        "dataHora": "2026-06-26 09:00",
+        "unidade": "UBS Vasconcellos",
+        "data_formatada": "26\/06\/2026 às 09:00h",
+        "status": "Ausente",
+        "cor_status": "#dc2626"
+    },
+    {
+        "cpf": "9341232",
+        "nome": "Lucas2",
+        "tipoConsulta": "vacina",
+        "dataHora": "2026-06-27 10:00",
+        "unidade": "Hospital Municipal",
+        "data_formatada": "27\/06\/2026 às 10:00h",
+        "status": "Agendado",
+        "cor_status": "#28a745"
+    },
+    {
+        "cpf": "12345678",
+        "paciente": "Teste2",
+        "tipoConsulta": "consulta",
+        "dataHora": "2026-06-17 14:00",
+        "unidade": "UBS Vasconcellos",
+        "status": "Ausente",
+        "data_formatada": "17\/06\/2026 às 14:00h",
+        "cor_status": "#dc2626"
+    }
+]

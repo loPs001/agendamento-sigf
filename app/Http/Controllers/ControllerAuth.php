@@ -44,7 +44,7 @@ class ControllerAuth extends Controller {
         ]);
     }
 
-   public function Login(Request $request) {
+    public function Login(Request $request) {
 
         $cpfForm = $request->json("cpf");
         $senhaForm = $request->json("senha");
@@ -57,25 +57,34 @@ class ControllerAuth extends Controller {
             $listaUsuarios = json_decode($dadosObtidos, true) ?? [];
         }
 
-        foreach($listaUsuarios as $usuario) {
+        foreach ($listaUsuarios as $usuario) {
             if ($usuario["cpf"] === $cpfForm) {
-                if (password_verify($senhaForm, $usuario["senha"])){
+                if (password_verify($senhaForm, $usuario["senha"])) {
 
-                    session(["usuario_logado" => $usuario]); // A session permite que quando existe um usuario logado, alias de ele apagar após o recarregamentos da página, ele possa guardar esses dados temporariamente até o momento que o usuario faça logouf da conta.
+                    if ($usuario["tipo"] === "medico") {
+                        session(["medico_logado" => $usuario]);
+
+                        return response()->json([
+                            "status"   => 200,
+                            "mensagem" => "Login realizado com sucesso!",
+                            "tipo"     => "medico"
+                        ]);
+                    }
+
+                    session(["usuario_logado" => $usuario]);
 
                     return response()->json([
-                        "status" => 200,
+                        "status"   => 200,
                         "mensagem" => "Login realizado com sucesso!",
+                        "tipo"     => "usuario"
                     ]);
                 }
             }
         }
-
         return response()->json([
-            "status" => 401,
+            "status"   => 401,
             "mensagem" => "Não foi possivel encontrar o usuário, verifique se os dados inseridos estão corretos..."
         ]);
-   
     }
 
 }

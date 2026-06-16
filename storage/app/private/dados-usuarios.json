@@ -1,20 +1,38 @@
 [
     {
+        "tipo": "usuario",
         "nome": "Teste2",
         "cpf": "12345678",
         "email": "teste@teste.com",
-        "senha": "$2y$12$ICudeLYS5pBHflI60kCSreY366tTvwUi2v1cJE0vhzmt5IM0m3XKG"
+        "senha": "$2y$10$UxAuMVM1Ha7jVqrIyeQYoemBrqSE7lBwI6TE4zBM02E0IxO6jgKBy"
     },
     {
+        "tipo": "usuario",
         "nome": "Teste3",
         "cpf": "123456789",
         "email": "gmail@gmail.com",
-        "senha": "$2y$12$KJOzNx1B5z81vOu3qC3YPOB6\/w9DOA25cd7xxUfGc\/n.voZKFqeSi"
+        "senha": "$2y$10$UxAuMVM1Ha7jVqrIyeQYoemBrqSE7lBwI6TE4zBM02E0IxO6jgKBy"
     },
     {
+        "tipo": "usuario",
         "nome": "Lucas2",
         "cpf": "9341232",
         "email": "jmail@jmail.com",
-        "senha": "$2y$12$d8ZX2tXQBw4ZMuNow3Tlve2XxHEx8YhfxCQuhLgH\/8rKj8PYtXk8K"
+        "senha": "$2y$10$UxAuMVM1Ha7jVqrIyeQYoemBrqSE7lBwI6TE4zBM02E0IxO6jgKBy"
+    },
+    {
+        "tipo": "medico",
+        "nome": "Dr. Carlos Silva",
+        "cpf": "11122233344",
+        "email": "carlos@clinica.com",
+        "crm": "123456-SP",
+        "senha": "$2y$10$UxAuMVM1Ha7jVqrIyeQYoemBrqSE7lBwI6TE4zBM02E0IxO6jgKBy"
+    },
+    {
+        "tipo": "usuario",
+        "nome": "Lucas",
+        "cpf": "9023142123",
+        "email": "amail@jmail.com",
+        "senha": "$2y$10$UxAuMVM1Ha7jVqrIyeQYoemBrqSE7lBwI6TE4zBM02E0IxO6jgKBy"
     }
 ]

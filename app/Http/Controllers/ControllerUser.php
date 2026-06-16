@@ -108,6 +108,7 @@ class ControllerUser extends Controller
     public function Logout()
     {
         session()->forget("usuario_logado");
+        session()->forget("medico_logado");
         return redirect()->route("home");
     }
 }

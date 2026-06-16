@@ -7,8 +7,7 @@
         <button class="btn-back" onclick="history.back()">← Voltar</button>
         <h2 class="section-title">Minhas Consultas Marcadas</h2>
 
-        <div class="appointments-list" id="appointmentsList">
-            
+        <div class="appointments-list" id="appointmentsList">     
             @forelse($consultas as $consulta)
                 
                 {{-- Card da Consulta --}}

@@ -18,6 +18,7 @@ class ModeloUsuario {
     // A única função que precisamos: ela transforma o cofre em um array simples
     public function toArray(): array {
         return [
+            "tipo"  => "usuario",
             "nome"  => $this->nome,
             "cpf"   => $this->cpf,
             "email" => $this->email,

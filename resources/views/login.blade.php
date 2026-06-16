@@ -43,7 +43,11 @@
                 const resultado = await resposta.json();
                 // console.log("Server Response:", resultado);
                 if (resultado.status === 200) {
-                    window.location.href = "{{route('painel_usuario')}}";
+                    if (resultado.tipo === "medico") {
+                        window.location.href = "{{ route('painel_medico') }}";
+                    } else {
+                        window.location.href = "{{ route('painel_usuario') }}";
+                    }
                 } else {
                     alert(resultado.mensagem);
                 }
